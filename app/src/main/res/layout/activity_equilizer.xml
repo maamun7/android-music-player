@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/bg_equlizer"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip"
+            android:background="@drawable/bg_equlizer">
+
+            <ImageButton
+                android:id="@id/equize_btn_back"
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6.0dip"
+                android:background="@drawable/ic_equiz_back_selector" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Equilizer"
+                android:textColor="#ffffffff"
+                android:textSize="18.0sp" />
+
+            <Spinner
+                android:id="@id/equize_sp_effect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="6.0dip"
+                android:layout_centerVertical="true"
+                android:background="@drawable/spinner_bg"
+                android:scrollbars="none"
+                android:spinnerMode="dialog"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_margin="1.0dip"
+            android:layout_weight="1.0"
+            android:background="@drawable/effect_bg"
+            android:padding="3.0dip">
+
+            <include
+                android:id="@+id/equize_layout_effect"
+                layout="@layout/include_equilizer_main"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="15.0dip"
+                android:layout_marginTop="15.0dip" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@id/equize_layout_bass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0">
+
+                <TextView
+                    android:id="@+id/tv_bass_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/equize_rv_bass"
+                    android:layout_marginBottom="3dip"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="00" />
+
+                <RelativeLayout
+                    android:id="@id/equize_rv_bass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="20dip" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="5.0dip"
+                    android:text="Bass"
+                    android:textColor="@color/equize_text_gray"
+                    android:textSize="13.0sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0">
+
+                <TextView
+                    android:id="@+id/tv_virtualizer_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/equize_rv_virtual"
+                    android:layout_marginBottom="3dip"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="00" />
+
+                <RelativeLayout
+                    android:id="@id/equize_rv_virtual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="20dip" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="5.0dip"
+                    android:text="Equiz virtual"
+                    android:textColor="@color/equize_text_gray"
+                    android:textSize="13.0sp" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@id/equize_enable_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#60000000"
+        android:visibility="gone" />
+</FrameLayout>

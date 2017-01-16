@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0">
+
+        <TextView
+            android:id="@id/effect_tv_volum"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="3.0dip"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:textColor="@color/equize_text_gray"
+            android:textSize="10.0sp" />
+
+        <TextView
+            android:id="@id/effect_tv_des_volum"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="3.0dip"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:text="Vol"
+            android:textColor="@color/equize_text_gray"
+            android:textSize="10.0sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignBottom="@id/bar_volum"
+            android:layout_alignTop="@id/bar_volum"
+            android:layout_marginLeft="-11.0dip"
+            android:layout_toRightOf="@id/bar_volum"
+            android:paddingBottom="@dimen/bar_image_margin_vertical"
+            android:paddingTop="@dimen/bar_image_margin_vertical"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_equiz_scale_level_right" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignBottom="@id/bar_volum"
+            android:layout_alignTop="@id/bar_volum"
+            android:layout_marginRight="-11.0dip"
+            android:layout_toLeftOf="@id/bar_volum"
+            android:paddingBottom="@dimen/bar_image_margin_vertical"
+            android:paddingTop="@dimen/bar_image_margin_vertical"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_equiz_scale_level_left" />
+
+        <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+            android:id="@+id/bar_volum"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true">
+
+            <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                android:id="@+id/vol_bar"
+                style="@style/equize_seekbar"
+                android:layout_above="@id/effect_tv_des_volum"
+                android:layout_below="@id/effect_tv_volum"
+                app:seekBarRotation="CW270" />
+            <!-- Rotation: CW90 or CW270 -->
+        </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+        <RelativeLayout
+            android:layout_width="15.0dip"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/effect_tv_des_volum"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/effect_tv_volum">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:text="0"
+                android:textColor="@color/equize_text_gray"
+                android:textSize="8.0sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:text="15"
+                android:textColor="@color/equize_text_gray"
+                android:textSize="8.0sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0">
+
+        <TextView
+            android:id="@id/effect_tv_v1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="3.0dip"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:text="60Hz"
+            android:textColor="@color/equize_text_gray"
+            android:textSize="10.0sp" />
+
+        <TextView
+            android:id="@id/effect_tv_des1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="3.0dip"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:text="6"
+            android:textColor="@color/equize_text_gray"
+            android:textSize="10.0sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignBottom="@id/vsk_equiz_wrapper1"
+            android:layout_alignTop="@id/vsk_equiz_wrapper1"
+            android:layout_marginLeft="-11.0dip"
+            android:layout_toRightOf="@id/vsk_equiz_wrapper1"
+            android:paddingBottom="@dimen/bar_image_margin_vertical"
+            android:paddingTop="@dimen/bar_image_margin_vertical"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_equiz_scale_level_right" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignBottom="@id/vsk_equiz_wrapper1"
+            android:layout_alignTop="@id/vsk_equiz_wrapper1"
+            android:layout_marginRight="-11.0dip"
+            android:layout_toLeftOf="@id/vsk_equiz_wrapper1"
+            android:paddingBottom="@dimen/bar_image_margin_vertical"
+            android:paddingTop="@dimen/bar_image_margin_vertical"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_equiz_scale_level_left" />
+
+        <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+            android:id="@id/vsk_equiz_wrapper1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true">
+
+            <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                android:id="@id/bar1"
+                style="@style/equize_seekbar"
+                android:layout_above="@id/effect_tv_des_volum"
+                android:layout_below="@id/effect_tv_volum"
+                app:seekBarRotation="CW270" />
+            <!-- Rotation: CW90 or CW270 -->
+        </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0">
+
+        <TextView
+            android:id="@id/effect_tv_f2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="3.0dip"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:text="230Hz"
+            android:textColor="@color/equize_text_gray"
+            android:textSize="10.0sp" />
+
+        <TextView
+            android:id="@id/effect_tv_des2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="3.0dip"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:text="2"
+            android:textColor="@color/equize_text_gray"
+            android:textSize="10.0sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignBottom="@id/vsk_equiz_wrapper2"
+            android:layout_alignTop="@id/vsk_equiz_wrapper2"
+            android:layout_marginLeft="-11.0dip"
+            android:layout_toRightOf="@id/vsk_equiz_wrapper2"
+            android:paddingBottom="@dimen/bar_image_margin_vertical"
+            android:paddingTop="@dimen/bar_image_margin_vertical"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_equiz_scale_level_right" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignBottom="@id/vsk_equiz_wrapper2"
+            android:layout_alignTop="@id/vsk_equiz_wrapper2"
+            android:layout_marginRight="-11.0dip"
+            android:layout_toLeftOf="@id/vsk_equiz_wrapper2"
+            android:paddingBottom="@dimen/bar_image_margin_vertical"
+            android:paddingTop="@dimen/bar_image_margin_vertical"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_equiz_scale_level_left" />
+
+        <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+            android:id="@id/vsk_equiz_wrapper2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true">
+
+            <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                android:id="@id/bar2"
+                style="@style/equize_seekbar"
+                android:layout_above="@id/effect_tv_des_volum"
+                android:layout_below="@id/effect_tv_volum"
+                app:seekBarRotation="CW270" />
+            <!-- Rotation: CW90 or CW270 -->
+        </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0">
+
+        <TextView
+            android:id="@id/effect_tv_f3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="3.0dip"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:text="910Hz"
+            android:textColor="@color/equize_text_gray"
+            android:textSize="10.0sp" />
+
+        <TextView
+            android:id="@id/effect_tv_des3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="3.0dip"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:text="0"
+            android:textColor="@color/equize_text_gray"
+            android:textSize="10.0sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignBottom="@id/vsk_equiz_wrapper3"
+            android:layout_alignTop="@id/vsk_equiz_wrapper3"
+            android:layout_marginLeft="-11.0dip"
+            android:layout_toRightOf="@id/vsk_equiz_wrapper3"
+            android:paddingBottom="@dimen/bar_image_margin_vertical"
+            android:paddingTop="@dimen/bar_image_margin_vertical"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_equiz_scale_level_right" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignBottom="@id/vsk_equiz_wrapper3"
+            android:layout_alignTop="@id/vsk_equiz_wrapper3"
+            android:layout_marginRight="-11.0dip"
+            android:layout_toLeftOf="@id/vsk_equiz_wrapper3"
+            android:paddingBottom="@dimen/bar_image_margin_vertical"
+            android:paddingTop="@dimen/bar_image_margin_vertical"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_equiz_scale_level_left" />
+
+        <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+            android:id="@id/vsk_equiz_wrapper3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true">
+
+            <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                android:id="@id/bar3"
+                style="@style/equize_seekbar"
+                android:layout_above="@id/effect_tv_des_volum"
+                android:layout_below="@id/effect_tv_volum"
+                app:seekBarRotation="CW270" />
+            <!-- Rotation: CW90 or CW270 -->
+        </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0">
+
+        <TextView
+            android:id="@id/effect_tv_f4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="3.0dip"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:text="3.6KHz"
+            android:textColor="@color/equize_text_gray"
+            android:textSize="10.0sp" />
+
+        <TextView
+            android:id="@id/effect_tv_des4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="3.0dip"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:text="2"
+            android:textColor="@color/equize_text_gray"
+            android:textSize="10.0sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignBottom="@id/vsk_equiz_wrapper4"
+            android:layout_alignTop="@id/vsk_equiz_wrapper4"
+            android:layout_marginLeft="-11.0dip"
+            android:layout_toRightOf="@id/vsk_equiz_wrapper4"
+            android:paddingBottom="@dimen/bar_image_margin_vertical"
+            android:paddingTop="@dimen/bar_image_margin_vertical"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_equiz_scale_level_right" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignBottom="@id/vsk_equiz_wrapper4"
+            android:layout_alignTop="@id/vsk_equiz_wrapper4"
+            android:layout_marginRight="-11.0dip"
+            android:layout_toLeftOf="@id/vsk_equiz_wrapper4"
+            android:paddingBottom="@dimen/bar_image_margin_vertical"
+            android:paddingTop="@dimen/bar_image_margin_vertical"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_equiz_scale_level_left" />
+
+        <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+            android:id="@id/vsk_equiz_wrapper4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true">
+
+            <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                android:id="@id/bar4"
+                style="@style/equize_seekbar"
+                android:layout_above="@id/effect_tv_des_volum"
+                android:layout_below="@id/effect_tv_volum"
+                app:seekBarRotation="CW270" />
+            <!-- Rotation: CW90 or CW270 -->
+        </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0">
+
+        <TextView
+            android:id="@id/effect_tv_f5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="3.0dip"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:text="1.4KHz"
+            android:textColor="@color/equize_text_gray"
+            android:textSize="10.0sp" />
+
+        <TextView
+            android:id="@id/effect_tv_des5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="3.0dip"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:text="6"
+            android:textColor="@color/equize_text_gray"
+            android:textSize="10.0sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignBottom="@id/vsk_equiz_wrapper5"
+            android:layout_alignTop="@id/vsk_equiz_wrapper5"
+            android:layout_marginLeft="-11.0dip"
+            android:layout_toRightOf="@id/vsk_equiz_wrapper5"
+            android:paddingBottom="@dimen/bar_image_margin_vertical"
+            android:paddingTop="@dimen/bar_image_margin_vertical"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_equiz_scale_level_right" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignBottom="@id/vsk_equiz_wrapper5"
+            android:layout_alignTop="@id/vsk_equiz_wrapper5"
+            android:layout_marginRight="-11.0dip"
+            android:layout_toLeftOf="@id/vsk_equiz_wrapper5"
+            android:paddingBottom="@dimen/bar_image_margin_vertical"
+            android:paddingTop="@dimen/bar_image_margin_vertical"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_equiz_scale_level_left" />
+
+        <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper
+            android:id="@id/vsk_equiz_wrapper5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true">
+
+            <com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBar
+                android:id="@id/bar5"
+                style="@style/equize_seekbar"
+                android:layout_above="@id/effect_tv_des_volum"
+                android:layout_below="@id/effect_tv_volum"
+                app:seekBarRotation="CW270" />
+            <!-- Rotation: CW90 or CW270 -->
+        </com.h6ah4i.android.widget.verticalseekbar.VerticalSeekBarWrapper>
+
+        <RelativeLayout
+            android:layout_width="15.0dip"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/effect_tv_des5"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/effect_tv_f5">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:text="0"
+                android:textColor="@color/equize_text_gray"
+                android:textSize="8.0sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:text="-15"
+                android:textColor="@color/equize_text_gray"
+                android:textSize="8.0sp" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:text="15"
+                android:textColor="@color/equize_text_gray"
+                android:textSize="8.0sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

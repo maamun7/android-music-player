@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="@dimen/grid_padding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="95.0dip"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/allMusic"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/main_button_selector"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/allMusicLeftPortion"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="left|center"
+                android:orientation="vertical"
+                android:paddingLeft="15dip">
+
+                <TextView
+                    android:id="@+id/tvAllMusicName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/main_item_margin"
+                    android:singleLine="true"
+                    android:text="@string/name_all_music"
+                    android:textColor="#ff383838"
+                    android:textSize="@dimen/main_item_names" />
+
+                <TextView
+                    android:id="@+id/tvCountMusicItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="#ff808080"
+                    android:textSize="@dimen/main_item_name" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/allMusicRightPortion"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="right|center"
+                android:orientation="vertical"
+                android:paddingRight="15dip">
+
+                <ImageView
+                    android:id="@+id/ivAlMusicImage"
+                    android:layout_width="@dimen/main_image_width"
+                    android:layout_height="@dimen/main_image_width"
+                    android:gravity="right|center"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/main_player" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/artistAndAlbumPortion"
+        android:layout_width="fill_parent"
+        android:layout_height="80.0dip"
+        android:layout_marginTop="8.0dip"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/artistPortion"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/main_button_selector"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="left|center">
+
+                <ImageView
+                    android:id="@+id/ivMainArtistImage"
+                    android:layout_width="@dimen/main_image_width"
+                    android:layout_height="@dimen/main_image_width"
+                    android:layout_marginLeft="15.0dip"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/main_artist_simple" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="left|center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/mainArtistTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/main_item_margin"
+                    android:singleLine="true"
+                    android:text="@string/name_artist"
+                    android:textColor="#ff4d4d4d"
+                    android:textSize="@dimen/main_item_names" />
+
+                <TextView
+                    android:id="@+id/countedArtistValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="#ff808080"
+                    android:textSize="@dimen/main_item_name" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="8.0dip"
+            android:layout_height="fill_parent"
+            android:background="@android:color/transparent" />
+
+        <LinearLayout
+            android:id="@+id/albumPortion"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/main_button_selector"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="left|center">
+
+                <ImageView
+                    android:id="@+id/ivMainAlbumImage"
+                    android:layout_width="@dimen/main_image_width"
+                    android:layout_height="@dimen/main_image_width"
+                    android:layout_marginLeft="15.0dip"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/main_album_simple" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="left|center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/mainAlbumTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/main_item_margin"
+                    android:singleLine="true"
+                    android:text="@string/name_album"
+                    android:textColor="#ff4d4d4d"
+                    android:textSize="@dimen/main_item_names" />
+
+                <TextView
+                    android:id="@+id/countedAlbumValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="#ff808080"
+                    android:textSize="@dimen/main_item_name" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/FolderAndPlaylistPortion"
+        android:layout_width="fill_parent"
+        android:layout_height="80.0dip"
+        android:layout_marginTop="8.0dip"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/folderPortion"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/main_button_selector"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="left|center">
+
+                <ImageView
+                    android:id="@+id/ivMainFolderImage"
+                    android:layout_width="@dimen/main_image_width"
+                    android:layout_height="@dimen/main_image_width"
+                    android:layout_marginLeft="15.0dip"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/main_folder_simple" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="left|center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/mainFolderTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/main_item_margin"
+                    android:singleLine="true"
+                    android:text="@string/name_folder"
+                    android:textColor="#ff4d4d4d"
+                    android:textSize="@dimen/main_item_names" />
+
+                <TextView
+                    android:id="@+id/tvCountedFolderValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="#ff808080"
+                    android:textSize="@dimen/main_item_name" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="8.0dip"
+            android:layout_height="fill_parent"
+            android:background="@android:color/transparent" />
+
+        <LinearLayout
+            android:id="@+id/PlaylistPortion"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/main_button_selector"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="left|center">
+
+                <ImageView
+                    android:id="@+id/ivMainPlaylistImage"
+                    android:layout_width="@dimen/main_image_width"
+                    android:layout_height="@dimen/main_image_width"
+                    android:layout_marginLeft="15.0dip"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/main_list_simple" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="left|center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/mainPlaylistTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/main_item_margin"
+                    android:singleLine="true"
+                    android:text="@string/name_playlist"
+                    android:textColor="#ff4d4d4d"
+                    android:textSize="@dimen/main_item_names" />
+
+                <TextView
+                    android:id="@+id/countedPlistValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="#ff808080"
+                    android:textSize="@dimen/main_item_name" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/lnlMediaScan"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/main_button_selector"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="5.0dip"
+            android:paddingTop="5.0dip">
+
+            <ImageView
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:background="@drawable/scanning"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/media_scan_title"
+                android:textColor="#ff4d4d4d"
+                android:textSize="@dimen/main_item_name" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dip"
+            android:layout_height="fill_parent"
+            android:background="#33000000" />
+
+        <LinearLayout
+            android:id="@+id/lnlEquilizer"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1."
+            android:background="@drawable/main_button_selector"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="5.0dip"
+            android:paddingTop="5.0dip">
+
+            <ImageView
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:background="@drawable/equalizer"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/equalizer_title"
+                android:textColor="#ff4d4d4d"
+                android:textSize="@dimen/main_item_name" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dip"
+            android:layout_height="fill_parent"
+            android:background="#33000000" />
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1."
+            android:background="@drawable/main_button_selector"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="5.0dip"
+            android:paddingTop="5.0dip">
+
+            <ImageView
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:background="@drawable/sleep"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/sleep_title"
+                android:textColor="#ff4d4d4d"
+                android:textSize="@dimen/main_item_name" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dip"
+            android:layout_height="fill_parent"
+            android:background="#33000000" />
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1."
+            android:background="@drawable/main_button_selector"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="5.0dip"
+            android:paddingTop="5.0dip">
+
+            <ImageView
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:background="@drawable/setting"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/setting_title"
+                android:textColor="#ff4d4d4d"
+                android:textSize="@dimen/main_item_name" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

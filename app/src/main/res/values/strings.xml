@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Music Player</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="welcomeGretings">Welcome ! </string>
+    <string name="loadinText">Please wait a moment,Loading ...</string>
+    <string name="title_activity_home">HomeActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">We are now in Home fragment </string>
+    <string name="name_all_music">All music</string>
+    <dimen name="main_item_margin">4.0dip</dimen>
+    <string name="name_artist">Artist</string>
+    <string name="name_album">Album</string>
+    <string name="name_folder">Folder</string>
+    <string name="name_playlist">Playlist</string>
+    <string name="media_scan_title">Scan Media</string>
+    <string name="equalizer_title">Equalizer</string>
+    <string name="sleep_title">Sleep</string>
+    <string name="setting_title">Settings</string>
+    <string name="song_title_in_list">This is song title</string>
+    <string name="second_page_all_music">All musics</string>
+    <string name="second_page_recent_play_text">Recent play</string>
+    <string name="title_activity_quilizer">QuilizerActivity</string>
+    <string name="title_activity_visualizer">VisualizerActivity</string>
+
+
+    <string name="cd_repeat">Repeat one or all</string>
+    <string name="cd_previous">Skip backwards</string>
+    <string name="cd_play">Play and pause</string>
+    <string name="cd_next">Skip forwards</string>
+</resources>

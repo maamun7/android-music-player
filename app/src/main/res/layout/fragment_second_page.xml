@@ -1,0 +1,126 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/second_page_all_music"
+        android:layout_width="match_parent"
+        android:layout_height="50.0dip"
+        android:layout_marginBottom="0.10dp"
+        android:orientation="horizontal"
+        android:paddingBottom="1dp"
+        android:paddingTop="1dp">
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/main_button_selector"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="1.0dip">
+
+            <ImageView
+                android:id="@+id/second_page_all_music_img"
+                android:layout_width="60.0dip"
+                android:layout_height="44.0dip"
+                android:background="@drawable/default_album_identify"
+                android:scaleType="centerInside" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnlAllMusics"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingBottom="4.0dip"
+            android:paddingLeft="6.0dip"
+            android:paddingRight="6.0dip"
+            android:paddingTop="4.0dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/second_page_all_music"
+                android:textColor="@color/song_title_color_in_list"
+                android:textSize="@dimen/song_title_text_size" />
+
+            <TextView
+                android:id="@+id/second_page_music_bottom_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="320 musics"
+                android:textColor="@color/artist_name_color_in_list"
+                android:textSize="@dimen/sont_artist_text_size" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/second_page_recent_play"
+        android:layout_width="match_parent"
+        android:layout_height="50.0dip"
+        android:layout_marginBottom="0.10dp"
+        android:background="@drawable/recyclear_selector_row"
+        android:orientation="horizontal"
+        android:paddingBottom="1dp"
+        android:paddingTop="1dp">
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/main_button_selector"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="1.0dip">
+
+            <ImageView
+                android:id="@+id/second_page_recent_play_img"
+                android:layout_width="60.0dip"
+                android:layout_height="44.0dip"
+                android:background="@drawable/default_album_identify"
+                android:scaleType="centerInside" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingBottom="4.0dip"
+            android:paddingLeft="6.0dip"
+            android:paddingRight="6.0dip"
+            android:paddingTop="4.0dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/second_page_recent_play_text"
+                android:textColor="@color/song_title_color_in_list"
+                android:textSize="@dimen/song_title_text_size" />
+
+            <TextView
+                android:id="@+id/second_page_recent_play_bottom_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="90 musics"
+                android:textColor="@color/artist_name_color_in_list"
+                android:textSize="@dimen/sont_artist_text_size" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

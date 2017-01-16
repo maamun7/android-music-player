@@ -1,0 +1,210 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2.0dip"
+    android:background="#1d2a74"
+    android:orientation="vertical"
+    android:id="@+id/lnlMainPlayer">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@id/tv_control_panel_title_main"
+            android:layout_width="0.01dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="2"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingBottom="1.0dip"
+            android:paddingLeft="8.0dip"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="Hello"
+            android:textColor="#ffffffff"
+            android:textSize="14.0sp" />
+
+        <TextView
+            android:id="@id/tv_control_panel_artist_main"
+            android:layout_width="0.01dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dp"
+            android:layout_weight="1"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="right"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="Artist name"
+            android:textColor="#ffffffff"
+            android:textSize="12.0sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imgBtnRepeat"
+                android:layout_width="40.0dip"
+                android:layout_height="45.0dip"
+                android:layout_gravity="right"
+                android:scaleType="centerInside"
+                android:background="@drawable/player_control_repeat" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight=".7"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imgBtnPrevious"
+                android:layout_width="40.0dip"
+                android:layout_height="45.0dip"
+                android:layout_gravity="right"
+                android:background="@drawable/img_btn_control_previous"
+                android:scaleType="centerInside" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical">
+
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="58dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivTruckImg"
+                    android:layout_width="58dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/default_album_identify"
+                    android:scaleType="fitCenter" />
+
+
+                <ImageButton
+                    android:id="@+id/imgBtnPlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_btn_control_play" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight=".7"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imgBtnNext"
+                android:layout_width="40.0dip"
+                android:layout_height="45.0dip"
+                android:layout_gravity="left"
+                android:background="@drawable/img_btn_control_next"
+                android:scaleType="centerInside" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imgBtnShuffle"
+                android:layout_width="40.0dip"
+                android:layout_height="45.0dip"
+                android:layout_gravity="left"
+                android:scaleType="centerInside"
+                android:background="@drawable/img_btn_shuffle" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/tvDurationChangeValue"
+            android:layout_width="0.01dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="1dp"
+            android:singleLine="true"
+            android:text="00.00"
+            android:textColor="#ffffffff"
+            android:textSize="11.0sp" />
+
+
+        <SeekBar
+            android:id="@+id/skb_song_progess_view"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0.50dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:max="100"
+            android:maxHeight="3dp"
+            android:progress="0"
+            android:progressDrawable="@drawable/customize_seekbar"
+            android:thumb="@drawable/seek_handler" />
+
+        <TextView
+            android:id="@+id/tvDurationTotalValue"
+            android:layout_width="0.01dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="1dp"
+            android:singleLine="true"
+            android:text="5.22"
+            android:textColor="#ffffffff"
+            android:textSize="11.0sp" />
+
+    </LinearLayout>
+</LinearLayout>

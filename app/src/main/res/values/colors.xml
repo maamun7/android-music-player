@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent_black">#80000000</color>
+    <color name="main_actionbar">#66000000</color>
+    <color name="main_background">#80ffffff</color>
+    <color name="main_button_select">#5cffffff</color>
+    <color name="song_title_color_in_list">#f1e5e5</color>
+    <color name="artist_name_color_in_list">#80ffffff</color>
+    <color name="song_duration_color_in_list">#aedf58</color>
+    <color name="list_item_bg_color">#80000000</color>
+    <color name="transparent_bg_color">#40000000</color>
+
+    <color name="equize_text_gray">#ffb7b7b7</color>
+    <color name="equize_sp_item_normal">#00000000</color>
+    <color name="equize_sp_item_pressed">#ff303030</color>
+
+    <!-- selected tab text -->
+    <color name="selected_tabtext">#bb000000</color>
+
+    <!-- non selected tab text -->
+    <color name="unselected_tabtext">#77000000</color>
+    <color name="shuffle_grey">#ffdedede</color>
+    <color name="background_grey">#ffdedede</color>
+
+    <!-- Transparent -->
+    <color name="transparent">#00000000</color>
+
+    <!-- Black -->
+    <color name="black">#ff000000</color>
+
+    <!-- White -->
+    <color name="white">#ffffffff</color>
+</resources>
